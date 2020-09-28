@@ -1,0 +1,42 @@
+<!-- let ary  = [{key1: 1,key2: 600},{key1: 300,key2: 20},{key1: 786, key2:780}, {key1:9, key2:98}, {key1:786, key2:6}];
+
+ary.filter((itm, i, a) => {
+        
+    for (let index = i+1; index < ary.length; index++) {
+
+        if (itm.key1 == ary[index].key1){
+
+            let p = ary.findIndex(
+ (N, i, arr)=>{
+                
+                if(itm.key1 == arr[i].key1){
+                    return arr[i];
+                }
+            });
+            console.log(p);
+            ary[index].key2 += itm.key2;
+            // let x =  a.indexOf(ary[index]);
+            ary.splice(p,1);
+        }
+    }
+}); -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(obj) {
+  return Object.keys(obj).reduce((sum,key)=>sum+parseFloat(obj[key]||0),0);
+}
+let sample = [{ a: 1 , b: 2 },{a:2, b:3}];
+
+console.log(`sum:${sum(sample)}`);
+    </script>
+</body>
+</html>

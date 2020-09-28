@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var input = [
+            {
+                key1: 1,
+                key2: 5
+            },
+            {
+                key1: 7,
+                key2: 6
+            },
+            {
+                key1: 6,
+                key2: 3
+            },
+            {
+                key1: 1,
+                key2: 6
+            },
+            {
+                key1: 6,
+                key2: 10
+            },
+            {
+                key1: 7,
+                key2: 10
+            },
+            {
+                key1: 10,
+                key2: 1
+            },
+            {
+                key1: 10,
+                key2: 1
+            },
+            {
+                key1: 10,
+                key2: 1
+            },
+            {
+                key1: 10,
+                key2: 1
+            },
+            {
+                key1: 10,
+                key2: 1
+            },
+            {
+                key1: 10,
+                key2: 1
+            },
+            {
+                key1: 10,
+                key2: 1
+            },
+
+            
+
+        ]
+        // input.filter((item, value) => {
+        //     console.log(item);
+        //     for (let index = value + 1; index < input.length < 0; index++) {
+        //         // total = {total + Number(input[value])},
+        //         console.log(index);
+        //     }
+        // })
+
+        var temp = {};
+        var obj = null;
+        for (var i = 0; i < input.length; i++) {
+            obj = input[i];
+           
+            // console.log(obj)
+            // console.log(obj.key1)
+            if (!temp[obj.key1]) {
+                temp[obj.key1] = obj;
+
+            } else {
+                // console.log([obj.key1])
+                temp[obj.key1].key2 += obj.key2;
+            }
+        }
+        console.log(temp);
+
+
+
+
+// input.filter((itm, i, a) => {
+//         console.log(i,a)
+//     for (let index = i+1; index < input.length; index++) {
+
+//         if (itm.key1 == input[index].key1){
+
+//             let p = input.findIndex(
+//  (N, i, input)=>{
+
+//                 if(itm.key1 == input[i].key1){
+//                     return input[i];
+//                 }
+//             });
+//             console.log(p);
+//             input[index].key2 += itm.key2;
+//             // let x =  a.indexOf(input[index]);
+//             input.splice(p,1);
+//         }
+//     }
+// });
+// console.log(input);
+
+    </script>
+</body>
+
+</html>
