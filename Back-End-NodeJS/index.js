@@ -6,6 +6,8 @@ const url = "mongodb://localhost/emp";
 
 const app = express();
 
+const PORT = 8000;
+
 mongoose.connect(url, {useNewUrlParser: true});
 
 const con = mongoose.connection;
@@ -20,6 +22,6 @@ const myurl = require('./routes/urls');
 
 app.use('/api', myurl);
 
-app.listen(8000, ()=>{
-    console.log('server running at 8000');
+app.listen(PORT, ()=>{
+    console.log(`server running at ${PORT}`);
 });
